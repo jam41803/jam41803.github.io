@@ -1,0 +1,225 @@
+{
+  "$schema": "https://frc2713.github.io/QRScout/schema.json",
+  "title": "QRScout",
+  "page_title": "Charged Up",
+  "sections": [
+    {
+      "name": "Prematch",
+      "fields": [
+        {
+          "code": "scouter",
+          "title": "Scouter Initials",
+          "preserveDataOnReset": true,
+          "type": "text",
+          "required": true,
+          "defaultValue": ""
+        },
+        {
+          "code": "robot",
+          "title": "Robot",
+          "preserveDataOnReset": true,
+          "type": "select",
+          "required": true,
+          "choices": {
+            "r1": "Red 1",
+            "b1": "Blue 1",
+            "r2": "Red 2",
+            "b2": "Blue 2",
+            "r3": "Red 3",
+            "b3": "Blue 3"
+          },
+          "defaultValue": "r1"
+        },
+        {
+          "code": "matchNumber",
+          "title": "Match Number",
+          "preserveDataOnReset": false,
+          "type": "number",
+          "required": true
+        },
+        {
+          "code": "teamNumber",
+          "title": "Team Number",
+          "preserveDataOnReset": false,
+          "type": "number",
+          "required": true
+        },
+        {
+          "code": "noShow",
+          "title": "No Show",
+          "type": "boolean",
+          "defaultValue": false,
+          "required": false
+        }
+      ]
+    },
+    {
+      "name": "Autonomous",
+      "fields": [
+        {
+          "code": "ahp",
+          "title": "Auton High Pieces Scored",
+          "type": "counter",
+          "defaultValue": 0,
+          "min": 0,
+          "required": false
+        },
+        {
+          "code": "amp",
+          "title": "Auton Mid Pieces Scored",
+          "type": "counter",
+          "defaultValue": 0,
+          "min": 0,
+          "required": false
+        },
+        {
+          "code": "afp",
+          "title": "Auton Low Pieces Scored",
+          "type": "counter",
+          "defaultValue": 0,
+          "min": 0,
+          "required": false
+        },
+        {
+          "code": "mb",
+          "title": "Mobility Bonus",
+          "type": "boolean",
+          "defaultValue": false,
+          "required": false
+        },
+        {
+          "code": "apu",
+          "title": "Picked Up Extra Piece",
+          "type": "boolean",
+          "defaultValue": false,
+          "required": false
+        },
+        {
+          "code": "ade",
+          "title": "Docked/Engaged/Failed",
+          "type": "select",
+          "choices": {
+            "none": "None",
+            "docked": "Docked",
+            "engaged": "Docked and Engaged",
+            "failed": "Failed"
+          },
+          "defaultValue": "none",
+          "required": false
+        }
+      ]
+    },
+    {
+      "name": "Teleop",
+      "fields": [
+        {
+          "code": "to",
+          "title": "Tipped Over",
+          "type": "boolean",
+          "defaultValue": false,
+          "required": false
+        },
+        {
+          "code": "fpu",
+          "title": "Picked Up Pieces From Floor",
+          "type": "boolean",
+          "defaultValue": false,
+          "required": false
+        },
+        {
+          "code": "scpu",
+          "title": "Pieces Scored on Mid/High",
+          "type": "select",
+          "choices": {
+            "none": "None",
+            "cones": "Cones",
+            "cubes": "Cubes",
+            "both": "Both"            
+          },
+          "defaultValue": "None",
+          "required": false
+        },
+        {
+          "code": "thp",
+          "title": "Teleop High Pieces Scored",
+          "type": "counter",
+          "defaultValue": 0,
+          "min": 0,
+          "required": false
+        },
+        {
+          "code": "tmp",
+          "title": "Teleop Mid Pieces Scored",
+          "type": "counter",
+          "defaultValue": 0,
+          "min": 0,
+          "required": false
+        },
+        {
+          "code": "tfp",
+          "title": "Teleop Low Pieces Scored",
+          "type": "counter",
+          "defaultValue": 0,
+          "min": 0,
+          "required": false
+        }
+      ]
+    },
+    {
+      "name": "Endgame",
+      "fields": [
+        {
+          "code": "egp",
+          "title": "Endgame Position",
+          "type": "select",
+          "choices": {
+            "none": "None",
+            "park": "Parked",
+            "docked": "Docked",
+            "engaged": "Docked and Engaged"
+          },
+          "defaultValue": "none",
+          "required": false
+        },
+        {
+          "code": "bb",
+          "title": "Used Its Buddy Balance",
+          "type": "boolean",
+          "defaultValue": false,
+          "required": false
+        },
+        {
+          "code": "d",
+          "title": "Died/Disabled",
+          "type": "boolean",
+          "defaultValue": false,
+          "required": false
+        }
+      ]
+    },
+    {
+      "name": "Postmatch",
+      "fields": [
+        {
+          "code": "pf",
+          "title": "Flagged",
+          "type": "select",
+          "choices": {
+            "none": "None",
+            "yellow": "Yellow",
+            "red": "Red"
+          },
+          "defaultValue": "none",
+          "required": false
+        },
+        {
+          "code": "notes",
+          "title": "Notes",
+          "type": "text",
+          "defaultValue": "",
+          "required": false
+        }
+      ]
+    }
+  ]
+}
